@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Huduma - MtotoClinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Boxicons CDN -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-green: #10b981;
+      --dark-green: #047857;
+      --light-green: #ecfdf5;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+<!-- Header / Navbar -->
+<header class="bg-white text-[var(--primary-green)] shadow-md sticky top-0 z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- Logo + Title -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <div class="w-12 h-12 overflow-hidden rounded-full">
+        <img 
+          src="MtotoClinic.jpg" 
+          alt="MtotoClinic Logo" 
+          class="w-full h-full object-cover"
+        >
+      </div>
+      <span class="text-2xl font-bold tracking-wide text-[var(--dark-green)]">MtotoClinic</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="space-x-6 hidden md:flex items-center">
+      <a href="index.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-home-alt'></i>
+        <span>Nyumbani</span>
+      </a>
+      <a href="about.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+             <i class="fas fa-info-circle"></i>
+        <span>Kuhusu Sisi</span>
+      </a>
+      <a href="services.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class="fas fa-stethoscope"></i>
+        <span>Huduma</span>
+      </a>
+      <a href="contact.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-phone-call'></i>
+        <span>Wasiliana</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none text-[var(--primary-green)]" aria-label="menu">
+      <i class='bx bx-menu text-2xl'></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 space-y-2 border-t border-[var(--light-green)]">
+    <a href="index.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-home-alt'></i>
+      <span>Nyumbani</span>
+    </a>
+    <a href="about.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-info-circle'></i>
+      <span>Kuhusu Sisi</span>
+    </a>
+    <a href="services.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-stethoscope'></i>
+      <span>Huduma</span>
+    </a>
+    <a href="contact.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)]">
+      <i class='bx bx-phone-call'></i>
+      <span>Wasiliana</span>
+    </a>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-[var(--light-green)] py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold text-[var(--dark-green)] mb-4">Huduma Zetu</h1>
+        <p class="text-xl text-gray-600">Tunatoa huduma kamili za kliniki kwa mama mjamzito, watoto na mama anayenyonyesha. Kila huduma inatolewa kwa ustadi na upendo.</p>
+      </div>
+    </section>
+
+    <!-- Services Content -->
+    <section class="max-w-4xl mx-auto py-16 px-6">
+      <!-- Huduma kwa Mama Mjamzito -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-female text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Huduma kwa Mama Mjamzito</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Tunatoa huduma za uchunguzi, ushauri, na matibabu kabla ya kujifungua kuhakikisha ujauzito salama na mtoto mwenye afya njema.</p>
+        
+        <div class="bg-[var(--light-green)] p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Huduma Zinazotolewa:</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Uchunguzi wa mara kwa mara wa ujauzito na kufuatilia maendeleo ya mtoto</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Vipimo vya damu, uchunguzi wa ultrasoni na vipimo vingine muhimu</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Ushauri wa lishe bora kwa mama mjamzito kwa afya yako na ya mtoto</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Mafunzo ya kujifungua na ushauri wa kujiandaa kwa ajili ya kujifungua</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Dawa za kujikinga na malaria zinazoidhinishwa kwa ajili ya mama mjamzito</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Usaidizi wa Kujifungua -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-baby-carriage text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Usaidizi wa Kujifungua</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Timu yetu ya wauguzi na madaktari inahakikisha mama anajifungua kwa usalama na amani katika mazingira ya kupendeza na ya kisasa.</p>
+        
+        <div class="bg-[var(--light-green)] p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Vipengele Muhimu:</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Kujifungua kwa asisti ya daktari mwenye uzoefu na wauguzi waliojihimu</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Matunzio ya maumivu wakati wa kujifungua kwa kutumia mbinu za kisasa</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Upandikizaji wa upasuaji ikiwa ni lazima kwa usalama wa mama na mtoto</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Ufuatiliaji wa karibu wa mama na mtoto baada ya kujifungua</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Chanjo za Watoto -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-syringe text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Chanjo za Watoto</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Huduma kamili za chanjo kwa watoto kulingana na ratiba ya afya ya taifa. Tunahakikisha mtoto wako anapata kinga dhidi ya magonjwa mbalimbali.</p>
+        
+        <div class="bg-[var(--light-green)] p-6 rounded-lg mb-6">
+          <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Ratiba ya Chanjo:</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-baby text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span><strong>Kuzaliwa:</strong> BCG, Polio 0, Hepatitis B</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-baby text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span><strong>Miezi 6:</strong> DPT-HepB-Hib 3, PCV 3, Polio 3, Rota 3</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-baby text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span><strong>Miezi 9:</strong> Chanjo ya Surua (Measles)</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-baby text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span><strong>Miaka 1-2:</strong> Chanjo za nyongeza kulingana na ratiba</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white border border-[var(--primary-green)] p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Faida za Chanjo:</h3>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <i class="fas fa-shield-alt text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Kumlinda mtoto wako na magonjwa hatari</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-heart text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Kuzuia maambukizi kwa watoto wengine katika jamii</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-stethoscope text-[var(--primary-green)] mt-1 mr-3"></i>
+              <span>Kupunguza hatari ya kuhitaji matibabu ya dharura</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Huduma Baada ya Kujifungua -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-user-md text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Huduma Baada ya Kujifungua</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Usaidizi wa mama baada ya kujifungua, ushauri wa lishe na malezi ya mtoto. Tunakusaidia kurejea katika hali bora ya afya na kukupa ujuzi wa kumlea mtoto wako.</p>
+        
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-[var(--light-green)] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Kwa Mama:</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Uchunguzi wa afya ya mama baada ya kujifungua</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ushauri wa lishe bora kwa mama anayenyonyesha</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Matibabu ya changamoto za kisaikolojia kama depression</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="bg-[var(--light-green)] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Kwa Mtoto:</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ushauri wa kunyonyesha na malezi ya mtoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ufuatiliaji wa ukuaji na maendeleo ya mtoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Usaidizi wa kutatua changamoto za lishe na usingizi</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ushauri wa Lishe -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-utensils text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Ushauri wa Lishe</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Mwongozo wa lishe kwa mama wajawazito na watoto wachanga. Tunakupa mpango wa lishe unaokidhi mahitaji yako na ya mtoto wako katika kila hatua ya ukuaji.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Kwa Mama Mjamzito na Anayenyonyesha</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-apple-alt text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Mipango ya lishe inayokidhi mahitaji maalum ya ujauzito</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-apple-alt text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ushauri wa vyakula vinavyokuongezea nguvu wakati wa kunyonyesha</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-apple-alt text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Mkakati wa kudumisha uzito sahihi baada ya kujifungua</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Kwa Watoto</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-carrot text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Mpango wa vyakula kwa watoto wachanga na watoto wadogo</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-carrot text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ushauri wa kuanzisha vyakula magumu kwa mtoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-carrot text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Mbinu za kukabiliana na watoto wanaopambana na lishe</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upangaji Uzazi -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-calendar-alt text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Upangaji Uzazi</h2>
+        </div>
+        <p class="text-lg text-gray-700 mb-4">Huduma za upangaji uzazi na ushauri wa afya ya uzazi. Tunakupa chaguo na ushauri wa kitaalamu ili uweze kupanga familia yako kwa njia inayokufaa.</p>
+        
+        <div class="bg-[var(--light-green)] p-6 rounded-lg">
+          <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Njia za Upangaji Uzazi:</h3>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div>
+              <h4 class="font-semibold text-[var(--dark-green)] mb-2">Njia za Kawaida</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-pills text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Dawa za kumeza</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-syringe text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Chanjo za uzazi wa mpango</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-ring text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Petiti za uzazi</span>
+                </li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 class="font-semibold text-[var(--dark-green)] mb-2">Njia za Kudumu</h4>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start">
+                  <i class="fas fa-user-md text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Kupandikiza vidonge chini ya ngozi</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-procedures text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Kutenga mimba kwa upasuaji</span>
+                </li>
+                <li class="flex items-start">
+                  <i class="fas fa-baby text-[var(--primary-green)] mt-1 mr-2 text-sm"></i>
+                  <span>Vifaa vya ndani ya tumbo</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Huduma Zingine -->
+      <div>
+        <h2 class="text-3xl font-bold text-[var(--dark-green)] mb-6">Huduma Zingine</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Huduma za Msingi</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-stethoscope text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ukaguzi wa kawaida wa afya ya mama na mtoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-pills text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Dawa za kuepusha malaria kwa mama wajawazito</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-brain text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Uchunguzi wa maendeleo ya mtoto</span>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Huduma Maalum</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-hand-holding-medical text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Huduma za dharura masaa yote kwa mama na watoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-teeth text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Ushauri wa afya ya meno kwa watoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-comments text-[var(--primary-green)] mt-1 mr-3"></i>
+                <span>Usaidizi wa kisaikolojia kwa mama</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-[var(--light-green)]">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-[var(--dark-green)] mb-4">Tayari Kutumia Huduma Zetu?</h2>
+        <p class="text-xl text-gray-700 mb-8">Wasiliana nasi leo kwa ajili ya miadi au maswali yoyote kuhusu huduma zetu.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+          <a href="contact.html" class="bg-[var(--primary-green)] text-white px-8 py-3 rounded-lg font-medium hover:bg-[var(--dark-green)] transition duration-300">
+            <i class="fas fa-phone-alt mr-2"></i>Tupigie Simu Sasa
+          </a>
+          <a href="contact.html" class="bg-white text-[var(--primary-green)] border border-[var(--primary-green)] px-8 py-3 rounded-lg font-medium hover:bg-[var(--primary-green)] hover:text-white transition duration-300">
+            <i class="fas fa-envelope mr-2"></i>Tutumie Barua Pepe
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-green)] text-white py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-baby text-2xl"></i>
+            <span class="text-2xl font-bold">MtotoClinic</span>
+          </div>
+          <p class="text-gray-300 mb-4">Tunatoa huduma bora za afya kwa mama na mtoto tangu 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Viungo vya Haraka</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Nyumbani</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">Kuhusu Sisi</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Huduma Zetu</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Wasiliana Nasi</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Huduma Zetu</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">Huduma kwa Mama Mjamzito</li>
+            <li class="text-gray-300">Huduma kwa Watoto</li>
+            <li class="text-gray-300">Ushauri wa Kunyonyesha</li>
+            <li class="text-gray-300">Chanjo za Watoto</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Wasiliana Nasi</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Sokoine Drive, Dar es Salaam</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">+255 123 456 789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">info@mtotoclinic.co.tz</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Jumatatu - Ijumaa: 8:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="year-services"></span> MtotoClinic. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-services').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

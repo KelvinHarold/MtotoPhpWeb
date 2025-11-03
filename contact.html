@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wasiliana Nasi - MtotoClinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Boxicons CDN -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-green: #10b981;
+      --dark-green: #047857;
+      --light-green: #ecfdf5;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+<!-- Header / Navbar -->
+<header class="bg-white text-[var(--primary-green)] shadow-md sticky top-0 z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- Logo + Title -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <div class="w-12 h-12 overflow-hidden rounded-full">
+        <img 
+          src="MtotoClinic.jpg" 
+          alt="MtotoClinic Logo" 
+          class="w-full h-full object-cover"
+        >
+      </div>
+      <span class="text-2xl font-bold tracking-wide text-[var(--dark-green)]">MtotoClinic</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="space-x-6 hidden md:flex items-center">
+      <a href="index.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-home-alt'></i>
+        <span>Nyumbani</span>
+      </a>
+      <a href="about.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+             <i class="fas fa-info-circle"></i>
+        <span>Kuhusu Sisi</span>
+      </a>
+      <a href="services.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class="fas fa-stethoscope"></i>
+        <span>Huduma</span>
+      </a>
+      <a href="contact.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-phone-call'></i>
+        <span>Wasiliana</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none text-[var(--primary-green)]" aria-label="menu">
+      <i class='bx bx-menu text-2xl'></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 space-y-2 border-t border-[var(--light-green)]">
+    <a href="index.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-home-alt'></i>
+      <span>Nyumbani</span>
+    </a>
+    <a href="about.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-info-circle'></i>
+      <span>Kuhusu Sisi</span>
+    </a>
+    <a href="services.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-stethoscope'></i>
+      <span>Huduma</span>
+    </a>
+    <a href="contact.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)]">
+      <i class='bx bx-phone-call'></i>
+      <span>Wasiliana</span>
+    </a>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-[var(--light-green)] py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold text-[var(--dark-green)] mb-4">Wasiliana Nasi</h1>
+        <p class="text-xl text-gray-600">Tupigie simu, tutumie barua pepe au tembelea kliniki yetu. Tuko tayari kukusikiliza na kukusaidia.</p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="max-w-6xl mx-auto py-16 px-6">
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div>
+          <h2 class="text-2xl font-bold text-[var(--dark-green)] mb-6">Tutumie Ujumbe</h2>
+          <form id="contact-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 mb-2">Jina Lako Kamili</label>
+                <input id="name" type="text" placeholder="Andika jina lako hapa" 
+                       class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] focus:border-transparent" required>
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-700 mb-2">Namba ya Simu</label>
+                <input id="phone" type="tel" placeholder="+255 XXX XXX XXX" 
+                       class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] focus:border-transparent" required>
+              </div>
+            </div>
+            
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">Barua Pepe</label>
+              <input id="email" type="email" placeholder="andika@baruapepe.com" 
+                     class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] focus:border-transparent" required>
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-gray-700 mb-2">Lengo la Ujumbe</label>
+              <select id="subject" class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] focus:border-transparent">
+                <option value="">Chagua lengo la ujumbe wako</option>
+                <option value="appointment">Kuandikisha miadi</option>
+                <option value="inquiry">Kuuliza maswali</option>
+                <option value="feedback">Maoni kuhusu huduma</option>
+                <option value="emergency">Dharura</option>
+                <option value="other">Mengineyo</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">Ujumbe Wako</label>
+              <textarea id="message" placeholder="Andika ujumbe wako hapa..." rows="6" 
+                        class="w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-2 focus:ring-[var(--primary-green)] focus:border-transparent" required></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-[var(--primary-green)] text-white py-3 rounded-lg font-medium hover:bg-[var(--dark-green)] transition duration-300">
+              <i class="fas fa-paper-plane mr-2"></i>Tuma Ujumbe
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h2 class="text-2xl font-bold text-[var(--dark-green)] mb-6">Maelezo Ya Mawasiliano</h2>
+          
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-map-marker-alt text-[var(--primary-green)]"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Eneo Letu</h3>
+                <p class="text-gray-600">Sokoine Drive, Dar es Salaam<br>Tanzania</p>
+                <a href="#" class="text-[var(--primary-green)] hover:text-[var(--dark-green)] text-sm mt-1 inline-block">
+                  <i class="fas fa-directions mr-1"></i>Angalia ramani
+                </a>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-phone-alt text-[var(--primary-green)]"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Namba za Simu</h3>
+                <p class="text-gray-600">
+                  <a href="tel:+255123456789" class="hover:text-[var(--primary-green)]">+255 123 456 789</a> (Kawaida)<br>
+                  <a href="tel:+255987654321" class="hover:text-[var(--primary-green)]">+255 987 654 321</a> (Dharura)
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-envelope text-[var(--primary-green)]"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Barua Pepe</h3>
+                <p class="text-gray-600">
+                  <a href="mailto:info@mtotoclinic.co.tz" class="hover:text-[var(--primary-green)]">info@mtotoclinic.co.tz</a><br>
+                  <a href="mailto:appointments@mtotoclinic.co.tz" class="hover:text-[var(--primary-green)]">appointments@mtotoclinic.co.tz</a>
+                </p>
+              </div>
+            </div>
+            
+            <div class="flex items-start">
+              <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                <i class="fas fa-clock text-[var(--primary-green)]"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-1">Masaa ya Huduma</h3>
+                <p class="text-gray-600">
+                  Jumatatu - Ijumaa: 8:00 asubuhi - 6:00 jioni<br>
+                  Jumamosi: 9:00 asubuhi - 1:00 mchana<br>
+                  Jumapili: Huduma za dharura pekee
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Emergency Contact -->
+          <div class="mt-8 bg-red-50 border border-red-200 rounded-xl p-6">
+            <div class="flex items-center mb-3">
+              <div class="bg-red-100 w-10 h-10 rounded-full flex items-center justify-center mr-3">
+                <i class="fas fa-exclamation-triangle text-red-600"></i>
+              </div>
+              <h3 class="text-lg font-semibold text-red-800">Dharura</h3>
+            </div>
+            <p class="text-red-700 mb-3">Kwa matukio ya dharura, tupigie simu moja kwa moja.</p>
+            <a href="tel:+255987654321" class="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-700 transition duration-300">
+              <i class="fas fa-phone-alt mr-2"></i>Piga Simu ya Dharura
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="bg-[var(--light-green)] py-16">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-[var(--dark-green)] mb-4">Tembelea Kliniki Yetu</h2>
+        <p class="text-xl text-center text-gray-600 mb-8">Tupo karibu nawe. Tembelea kliniki yetu kwa huduma bora za mama na mtoto.</p>
+        
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <div class="h-96 w-full bg-gray-200 flex items-center justify-center">
+            <div class="text-center">
+              <i class="fas fa-map-marked-alt text-4xl text-[var(--primary-green)] mb-4"></i>
+              <p class="text-gray-600">Ramani ya Eneo la MtotoClinic</p>
+              <p class="text-sm text-gray-500 mt-2">Sokoine Drive, Dar es Salaam</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-4xl mx-auto py-16 px-6">
+      <h2 class="text-3xl font-bold text-center text-[var(--dark-green)] mb-12">Maswali Yanayoulizwa Mara Kwa Mara</h2>
+      
+      <div class="space-y-6">
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Je, naweza kuandikisha miadi kupitia mtandao?</h3>
+          <p class="text-gray-600">Ndio, unaweza kutumia fomu hapo juu kuandikisha miadi. Tutakupigia simu kuthibitisha miadi yako ndani ya masaa 24.</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Je, mnakubali bima za afya?</h3>
+          <p class="text-gray-600">Ndio, tunakubali bima mbalimbali za afya. Tafadhali wasiliana nasi kwa maelezo zaidi kuhusu bima tunazokubali.</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-6">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Mna huduma gani za dharura?</h3>
+          <p class="text-gray-600">Tunatoa huduma za dharura masaa 24 kwa ajili ya mama na watoto. Kwa dharura, piga simu moja kwa moja kwenye namba yetu ya dharura.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-green)] text-white py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-baby text-2xl"></i>
+            <span class="text-2xl font-bold">MtotoClinic</span>
+          </div>
+          <p class="text-gray-300 mb-4">Tunatoa huduma bora za afya kwa mama na mtoto tangu 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Viungo vya Haraka</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Nyumbani</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">Kuhusu Sisi</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Huduma Zetu</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Wasiliana Nasi</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Huduma Zetu</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">Huduma kwa Mama Mjamzito</li>
+            <li class="text-gray-300">Huduma kwa Watoto</li>
+            <li class="text-gray-300">Ushauri wa Kunyonyesha</li>
+            <li class="text-gray-300">Chanjo za Watoto</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Wasiliana Nasi</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Sokoine Drive, Dar es Salaam</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">+255 123 456 789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">info@mtotoclinic.co.tz</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Jumatatu - Ijumaa: 8:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="year-contact"></span> MtotoClinic. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-contact').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Contact form handling
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value.trim();
+      
+      // Basic validation
+      if (!name || !phone || !email || !message) {
+        alert('Tafadhali jaza sehemu zote zinazohitajika.');
+        return;
+      }
+      
+      // Show success message
+      alert(`Asante ${name}! Ujumbe wako umetumwa kikamilifu. Tutawasiliana nawe hivi karibuni.`);
+      
+      // Reset form
+      form.reset();
+    });
+  </script>
+</body>
+</html>

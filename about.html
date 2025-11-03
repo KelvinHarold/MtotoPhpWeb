@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuhusu Sisi - MtotoClinic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Boxicons CDN -->
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-green: #10b981;
+      --dark-green: #047857;
+      --light-green: #ecfdf5;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+<!-- Header / Navbar -->
+<header class="bg-white text-[var(--primary-green)] shadow-md sticky top-0 z-50 transition-all duration-300">
+  <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+    <!-- Logo + Title -->
+    <a href="index.html" class="flex items-center space-x-3">
+      <div class="w-12 h-12 overflow-hidden rounded-full">
+        <img 
+          src="MtotoClinic.jpg" 
+          alt="MtotoClinic Logo" 
+          class="w-full h-full object-cover"
+        >
+      </div>
+      <span class="text-2xl font-bold tracking-wide text-[var(--dark-green)]">MtotoClinic</span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <div class="space-x-6 hidden md:flex items-center">
+      <a href="index.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-home-alt'></i>
+        <span>Nyumbani</span>
+      </a>
+      <a href="about.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+             <i class="fas fa-info-circle"></i>
+        <span>Kuhusu Sisi</span>
+      </a>
+      <a href="services.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class="fas fa-stethoscope"></i>
+        <span>Huduma</span>
+      </a>
+      <a href="contact.html" class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+        <i class='bx bx-phone-call'></i>
+        <span>Wasiliana</span>
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none text-[var(--primary-green)]" aria-label="menu">
+      <i class='bx bx-menu text-2xl'></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 space-y-2 border-t border-[var(--light-green)]">
+    <a href="index.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-home-alt'></i>
+      <span>Nyumbani</span>
+    </a>
+    <a href="about.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-info-circle'></i>
+      <span>Kuhusu Sisi</span>
+    </a>
+    <a href="services.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+      <i class='bx bx-stethoscope'></i>
+      <span>Huduma</span>
+    </a>
+    <a href="contact.html" class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)]">
+      <i class='bx bx-phone-call'></i>
+      <span>Wasiliana</span>
+    </a>
+  </div>
+</header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero Section -->
+    <section class="bg-[var(--light-green)] py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h1 class="text-4xl font-bold text-[var(--dark-green)] mb-4">Kuhusu MtotoClinic</h1>
+        <p class="text-xl text-gray-600">Tunajali afya ya mama na mtoto wako. Tangu 2010, tumekuwa tukitoa huduma bora za kliniki kwa jamii yetu.</p>
+      </div>
+    </section>
+
+    <!-- Our Story -->
+    <section class="max-w-4xl mx-auto py-16 px-6">
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-history text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Historia Yetu</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <p class="text-lg text-gray-700 mb-4">MtotoClinic ilianzishwa mwaka 2010 na Dk. Amina Juma, mtaalamu wa afya ya watoto aliyeona uhitaji wa huduma maalum za afya kwa mama na watoto katika jamii yetu.</p>
+            <p class="text-lg text-gray-700 mb-4">Tangu wakati huo, tumekua kutoka kituo kidogo hadi kituo kikubwa cha afya kinachotoa huduma mbalimbali kwa mama na watoto.</p>
+            <p class="text-lg text-gray-700">Leo, tunajivunia kuwahudumia zaidi ya mama 5,000 na watoto 10,000 kila mwaka, tukihakikisha kila mmoja anapata huduma bora zaidi.</p>
+          </div>
+          <div class="relative">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
+                 alt="Daktari na mtoto" class="rounded-xl shadow-lg">
+            <div class="absolute -bottom-4 -left-4 bg-[var(--primary-green)] text-white p-4 rounded-lg shadow-lg">
+              <p class="font-bold text-lg">5,000+</p>
+              <p class="text-sm">Mama Waliohudumiwa</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mission & Vision -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-bullseye text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Dhamira na Maono Yetu</h2>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-[var(--light-green)] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Dhamira Yetu</h3>
+            <p class="text-gray-700 mb-4">Kutoa huduma za afya kwa mama na mtoto kwa upendo, ufanisi, na kwa viwango vya hali ya juu.</p>
+            <p class="text-gray-700">Tunajitolea kuhakikisha kila mama na mtoto wanapata huduma bora zaidi kwa gharama nafuu.</p>
+          </div>
+          
+          <div class="bg-[var(--light-green)] p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-4">Maono Yetu</h3>
+            <p class="text-gray-700 mb-4">Kuona jamii yenye afya na ustawi wa mama na mtoto katika maeneo tunayohudumia.</p>
+            <p class="text-gray-700">Tunataka kuwa kituo bora cha afya kwa mama na mtoto nchini Tanzania na Afrika Mashariki kwa ujumla.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Values -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-heart text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Thamani Zetu</h2>
+        </div>
+        
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Upendo na Huruma</h3>
+            <p class="text-gray-700">Tunawapa wagonjwa wetu upendo na huruma kama tunavyowapenda ndugu zetu wenyewe. Tunajali kwa dhati afya na ustawi wa kila mama na mtoto anayetufikia.</p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Ubora wa Huduma</h3>
+            <p class="text-gray-700">Tunatoa huduma bora zaidi kwa kutumia vifaa vya kisasa na wataalamu wenye ujuzi. Tunadumisha viwango vya juu katika kila kitu tunachofanya.</p>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-semibold text-[var(--dark-green)] mb-3">Uwajibikaji</h3>
+            <p class="text-gray-700">Tunajihusisha na jamii na kuwajibika kwa kila hatua tunayochukua katika kutoa huduma zetu. Tunajibu kwa wazi maswali na wasiwasi wa wateja wetu.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Our Team -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-users text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Timu Yetu</h2>
+        </div>
+        
+        <p class="text-lg text-gray-700 mb-8">Tuna timu ya wataalamu wenye ujuzi na uzoefu wa kutoa huduma bora kwa mama na watoto. Kila mwanachama wa timu yetu ana mafunzo maalum na anajitolea kuwapa wateja wetu huduma bora zaidi.</p>
+        
+        <div class="space-y-8">
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                 alt="Dk. Amina Juma" class="w-32 h-32 object-cover rounded-lg shadow-md">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Dk. Amina Juma</h3>
+              <p class="text-[var(--primary-green)] font-medium mb-2">Mkurugenzi na Mtaalamu wa Watoto</p>
+              <p class="text-gray-700">Ana uzoefu wa miaka 15 katika afya ya watoto na mama. Dk. Amina ndiye mwanzilishi wa MtotoClinic na ana shauku kubwa ya kuhakikisha kila mtoto na mama anapata huduma bora za afya.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                 alt="Dk. John Michael" class="w-32 h-32 object-cover rounded-lg shadow-md">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Dk. John Michael</h3>
+              <p class="text-[var(--primary-green)] font-medium mb-2">Mtaalamu wa Uzazi na Watoto</p>
+              <p class="text-gray-700">Mtaalamu wa uzazi na watoto wenye uzoefu wa miaka 12. Dk. John amehudumia mama na watoto wengi na ana sifa nzuri katika kutoa huduma za uzazi na watoto.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="https://images.unsplash.com/photo-1594824947933-d0501ba2fe65?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                 alt="Nesi Neema Kondo" class="w-32 h-32 object-cover rounded-lg shadow-md">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Nesi Neema Kondo</h3>
+              <p class="text-[var(--primary-green)] font-medium mb-2">Mkuu wa Waangalizi</p>
+              <p class="text-gray-700">Ana uzoefu wa miaka 10 katika utunzaji wa mama na watoto. Nesi Neema anajulikana kwa upendo wake kwa wagonjwa na ujuzi wake mkubwa katika huduma za uangalizi.</p>
+            </div>
+          </div>
+          
+          <div class="flex flex-col md:flex-row gap-6 items-start">
+            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" 
+                 alt="Nesi Sarah William" class="w-32 h-32 object-cover rounded-lg shadow-md">
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">Nesi Sarah William</h3>
+              <p class="text-[var(--primary-green)] font-medium mb-2">Mtaalamu wa Kunyonyesha</p>
+              <p class="text-gray-700">Mtaalamu wa kunyonyesha na lishe ya watoto wenye uzoefu wa miaka 8. Nesi Sarah amewasaidia mama wengi kujifunza mbinu bora za kunyonyesha na kutatua changamoto mbalimbali.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Achievements -->
+      <div class="mb-16">
+        <div class="flex items-center mb-6">
+          <div class="bg-[var(--light-green)] w-12 h-12 rounded-full flex items-center justify-center mr-4">
+            <i class="fas fa-trophy text-[var(--primary-green)] text-xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-[var(--dark-green)]">Mafanikio Yetu</h2>
+        </div>
+        
+        <p class="text-lg text-gray-700 mb-8">Kwa miaka ya huduma zetu, tumefanikiwa kuwahudumia wateja wengi na kupanua huduma zetu ili kukidhi mahitaji ya jamii yetu.</p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="bg-[var(--light-green)] p-4 rounded-lg text-center">
+            <div class="text-2xl font-bold text-[var(--primary-green)] mb-1">13+</div>
+            <p class="text-gray-700 text-sm">Miaka ya Huduma</p>
+          </div>
+          
+          <div class="bg-[var(--light-green)] p-4 rounded-lg text-center">
+            <div class="text-2xl font-bold text-[var(--primary-green)] mb-1">15,000+</div>
+            <p class="text-gray-700 text-sm">Wateja Waliohudumiwa</p>
+          </div>
+          
+          <div class="bg-[var(--light-green)] p-4 rounded-lg text-center">
+            <div class="text-2xl font-bold text-[var(--primary-green)] mb-1">50+</div>
+            <p class="text-gray-700 text-sm">Wataalamu wa Afya</p>
+          </div>
+          
+          <div class="bg-[var(--light-green)] p-4 rounded-lg text-center">
+            <div class="text-2xl font-bold text-[var(--primary-green)] mb-1">98%</div>
+            <p class="text-gray-700 text-sm">Wateja Walioridhika</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-[var(--light-green)]">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-[var(--dark-green)] mb-4">Je, Unataka Kujua Zaidi Kuhusu Sisi?</h2>
+        <p class="text-xl text-gray-700 mb-8">Wasiliana nasi leo kwa maswali yoyote au kujua zaidi kuhusu huduma zetu.</p>
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+          <a href="contact.html" class="bg-[var(--primary-green)] text-white px-8 py-3 rounded-lg font-medium hover:bg-[var(--dark-green)] transition duration-300">
+            <i class="fas fa-phone-alt mr-2"></i>Tupigie Simu Sasa
+          </a>
+          <a href="services.html" class="bg-white text-[var(--primary-green)] border border-[var(--primary-green)] px-8 py-3 rounded-lg font-medium hover:bg-[var(--primary-green)] hover:text-white transition duration-300">
+            <i class="fas fa-info-circle mr-2"></i>Angalia Huduma Zetu
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-green)] text-white py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-baby text-2xl"></i>
+            <span class="text-2xl font-bold">MtotoClinic</span>
+          </div>
+          <p class="text-gray-300 mb-4">Tunatoa huduma bora za afya kwa mama na mtoto tangu 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Viungo vya Haraka</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Nyumbani</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">Kuhusu Sisi</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Huduma Zetu</a></li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Wasiliana Nasi</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Huduma Zetu</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">Huduma kwa Mama Mjamzito</li>
+            <li class="text-gray-300">Huduma kwa Watoto</li>
+            <li class="text-gray-300">Ushauri wa Kunyonyesha</li>
+            <li class="text-gray-300">Chanjo za Watoto</li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Wasiliana Nasi</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Sokoine Drive, Dar es Salaam</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">+255 123 456 789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">info@mtotoclinic.co.tz</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Jumatatu - Ijumaa: 8:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="year-about"></span> MtotoClinic. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-about').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

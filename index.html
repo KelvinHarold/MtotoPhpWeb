@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MtotoClinic - Huduma Bora za Afya kwa Mama na Mtoto</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Boxicons CDN -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-green: #10b981;
+      --dark-green: #047857;
+      --light-green: #ecfdf5;
+    }
+
+    .hero-bg {
+      background: linear-gradient(rgba(16, 185, 129, 0.9), rgba(4, 120, 87, 0.9)), url('https://images.unsplash.com/photo-1519494140689-70e2c1e79913?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 flex flex-col min-h-screen">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white text-[var(--primary-green)] shadow-md sticky top-0 z-50 transition-all duration-300">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+
+      <!-- Logo + Title -->
+      <a href="index.html" class="flex items-center space-x-3">
+        <div class="w-12 h-12 overflow-hidden rounded-full">
+          <img src="MtotoClinic.jpg" alt="MtotoClinic Logo" class="w-full h-full object-cover">
+        </div>
+        <span class="text-2xl font-bold tracking-wide text-[var(--dark-green)]">MtotoClinic</span>
+      </a>
+
+      <!-- Desktop Menu -->
+      <div class="space-x-6 hidden md:flex items-center">
+        <a href="index.html"
+          class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+          <i class='bx bx-home-alt'></i>
+          <span>Nyumbani</span>
+        </a>
+        <a href="about.html"
+          class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+          <i class="fas fa-info-circle"></i>
+          <span>Kuhusu Sisi</span>
+        </a>
+        <a href="services.html"
+          class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+          <i class="fas fa-stethoscope"></i>
+          <span>Huduma</span>
+        </a>
+        <a href="contact.html"
+          class="flex items-center space-x-1 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b-2 border-transparent hover:border-[var(--primary-green)] pb-1 transition-all">
+          <i class='bx bx-phone-call'></i>
+          <span>Wasiliana</span>
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none text-[var(--primary-green)]" aria-label="menu">
+        <i class='bx bx-menu text-2xl'></i>
+      </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white px-4 pb-4 space-y-2 border-t border-[var(--light-green)]">
+      <a href="index.html"
+        class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+        <i class='bx bx-home-alt'></i>
+        <span>Nyumbani</span>
+      </a>
+      <a href="about.html"
+        class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+        <i class='bx bx-info-circle'></i>
+        <span>Kuhusu Sisi</span>
+      </a>
+      <a href="services.html"
+        class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)] border-b border-[var(--light-green)]">
+        <i class='bx bx-stethoscope'></i>
+        <span>Huduma</span>
+      </a>
+      <a href="contact.html"
+        class="flex items-center space-x-2 py-2 font-medium text-[var(--primary-green)] hover:text-[var(--dark-green)]">
+        <i class='bx bx-phone-call'></i>
+        <span>Wasiliana</span>
+      </a>
+    </div>
+  </header>
+
+
+  <section class="relative hero-bg text-white py-20 md:py-32 bg-cover bg-center bg-no-repeat"
+    style="background-image: url('Wc.jpg');">
+    <!-- Overlay ya kijani yenye opacity -->
+    <div class="absolute inset-0 bg-gradient-to-r from-green-800/80 via-green-700/70 to-green-600/60"></div>
+
+    <div class="relative max-w-4xl mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Tunza Mama, Linda Mtoto, Jenga Taifa Imara
+      </h1>
+      <p class="text-xl md:text-2xl mb-8">
+        MtotoClinic inatoa huduma bora za kliniki kwa mama mjamzito, watoto na mama anayenyonyesha. Tunaweza pamoja.
+      </p>
+
+  </section>
+
+
+
+  <!-- Services Overview -->
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-[var(--dark-green)] mb-4">Huduma Zetu Kuu</h2>
+      <p class="text-xl text-gray-600">Tunatoa huduma zote muhimu za kliniki kuhakikisha afya bora kwa mama na mtoto
+        wako.</p>
+    </div>
+
+    <div class="space-y-12">
+      <!-- Huduma kwa Mama Mjamzito -->
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+
+        <!-- Text Content -->
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[var(--dark-green)] mb-4">Huduma kwa Mama Mjamzito</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Ufuatiliaji wa ujauzito, vipimo na ushauri wa lishe bora kwa mama na mtoto. Tunakuhakikishia ujauzito salama
+            na mtoto mwenye afya njema.
+          </p>
+
+          <div class="bg-[var(--light-green)] p-4 rounded-lg mb-4">
+            <h4 class="font-semibold text-[var(--dark-green)] mb-2">Huduma Zinazotolewa:</h4>
+            <ul class="text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Uchunguzi wa mara kwa mara wa ujauzito</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Vipimo vya damu na ultrasoni</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Ushauri wa lishe bora kwa mama mjamzito</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Image Content -->
+          <div class="flex-shrink-0 md:w-1/2">
+            <img src="P1.jpg" alt="Huduma kwa Mama Mjamzito" class="rounded-xl shadow-lg w-full object-cover">
+          </div>
+
+          <a href="services.html#mama-mjamzito"
+            class="inline-block mt-4 text-[var(--primary-green)] font-medium hover:text-[var(--dark-green)]">
+            Jifunze Zaidi Kuhusu Huduma za Mama Mjamzito <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Huduma kwa Watoto -->
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+
+        <!-- Text Content -->
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[var(--dark-green)] mb-4">Huduma kwa Watoto</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Chanjo, ukaguzi wa mara kwa mara, matibabu ya magonjwa ya watoto na ushauri wa malezi. Tunajali ukuaji na
+            ustawi wa mtoto wako tangu kuzaliwa.
+          </p>
+
+          <div class="bg-[var(--light-green)] p-4 rounded-lg mb-4">
+            <h4 class="font-semibold text-[var(--dark-green)] mb-2">Huduma Zinazotolewa:</h4>
+            <ul class="text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Chanjo zote muhimu kulingana na ratiba ya kitaifa</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Uchunguzi wa ukuaji na maendeleo ya mtoto</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Matibabu ya magonjwa ya watoto wadogo</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Image Content -->
+          <div class="flex-shrink-0 md:w-1/2">
+            <img src="M1.jpg" alt="Huduma kwa Watoto" class="rounded-xl shadow-lg w-full object-cover">
+          </div>
+
+          <a href="services.html#watoto"
+            class="inline-block mt-4 text-[var(--primary-green)] font-medium hover:text-[var(--dark-green)]">
+            Jifunze Zaidi Kuhusu Huduma za Watoto <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+
+
+      </div>
+
+
+      <!-- Huduma kwa Mama na Mtoto -->
+      <div class="flex flex-col md:flex-row gap-8 items-center md:items-start">
+        <div class="flex-1">
+          <h3 class="text-2xl font-bold text-[var(--dark-green)] mb-4">Huduma kwa Mama na Mtoto</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Ushauri wa kunyonyesha, lishe bora kwa mama anayenyonyesha na msaada wa kijamii. Tunakusaidia katika safari
+            yako ya kuwa mama na kumlea mtoto wako.
+          </p>
+
+          <div class="bg-[var(--light-green)] p-4 rounded-lg mb-4">
+            <h4 class="font-semibold text-[var(--dark-green)] mb-2">Huduma Zinazotolewa:</h4>
+            <ul class="text-gray-700 space-y-2">
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Ushauri wa mbinu sahihi za kunyonyesha</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Mipango ya lishe kwa mama anayenyonyesha</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-[var(--primary-green)] mt-1 mr-2"></i>
+                <span>Usaidizi wa kijamii kwa mama wanao hitaji</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Image Content -->
+          <div class="flex-shrink-0 md:w-1/2">
+            <img src="W2.jpg" alt="Huduma kwa Mama na Mtoto" class="rounded-xl shadow-lg w-full object-cover">
+          </div>
+
+          <a href="services.html#mama-mtoto"
+            class="inline-block mt-4 text-[var(--primary-green)] font-medium hover:text-[var(--dark-green)]">
+            Jifunze Zaidi Kuhusu Huduma za Mama na Mtoto <i class="fas fa-arrow-right ml-1"></i>
+          </a>
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section (Simplified, No Cards) -->
+  <section class="bg-gradient-to-br from-[#e6f8ec] to-white py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-[var(--dark-green)] mb-12 md:mb-16">
+        Kwa Nini Kuchagua MtotoClinic?
+      </h2>
+
+      <div class="max-w-5xl mx-auto relative overflow-hidden">
+        <!-- Benefits Slider -->
+        <div id="benefits-slider" class="flex transition-transform duration-700 ease-in-out">
+          <!-- Benefit 1 -->
+          <div class="flex-shrink-0 w-full px-4 flex items-start gap-6 md:gap-8">
+            <div class="bg-[var(--light-green)] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-user-nurse text-[var(--primary-green)] text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--dark-green)] mb-4">Wataalamu Wenye Uzoefu</h3>
+              <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                Tuna wataalamu wa afya ya watoto na mama wenye uzoefu wa miaka mingi katika kutoa huduma bora.
+                Kila mwanachama wa timu yetu ana mafunzo maalum na anajitolea kuwapa wateja wetu huduma bora zaidi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="flex-shrink-0 w-full px-4 flex items-start gap-6 md:gap-8">
+            <div class="bg-[var(--light-green)] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-hospital-user text-[var(--primary-green)] text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--dark-green)] mb-4">Mazingira ya Kupendeza</h3>
+              <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                Kliniki yetu imeundwa kwa makini ili kuwafariji wagonjwa wetu, hasa watoto wadogo.
+                Tuna vyumba vilivyo safi, vya kisasa na vyenye vifaa vya hali ya juu kuhakikisha upoaji huduma bora.
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="flex-shrink-0 w-full px-4 flex items-start gap-6 md:gap-8">
+            <div class="bg-[var(--light-green)] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-ambulance text-[var(--primary-green)] text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--dark-green)] mb-4">Huduma za Dharura 24/7</h3>
+              <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                Tunatoa huduma za dharura masaa yote ya siku na usiku kwa ajili ya mama na watoto.
+                Timu yetu ya dharura iko tayari kukuhudumia wakati wowote unapohitaji usaidizi wa haraka.
+              </p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="flex-shrink-0 w-full px-4 flex items-start gap-6 md:gap-8">
+            <div class="bg-[var(--light-green)] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-hand-holding-heart text-[var(--primary-green)] text-2xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl md:text-2xl font-bold text-[var(--dark-green)] mb-4">Upendo na Uangalifu</h3>
+              <p class="text-gray-700 text-base md:text-lg leading-relaxed">
+                Tunawapa watoto na mama zao upendo na uangalifu wa kina.
+                Kila mgonjwa anastahili huduma bora zaidi na tunajitahidi kuwapa fursa ya kupata matibabu bora.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Section with Colored Numbers & Animated Bars -->
+      <div
+        class="bg-white rounded-2xl p-8 mb-12 border border-gray-100 shadow-md hover:shadow-lg transition-all duration-300 mt-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+
+          <!-- Statistic 1 -->
+          <div>
+            <div class="text-3xl font-bold text-blue-400 mb-2">13+</div>
+            <div class="text-gray-600 text-sm mb-3">Miaka ya Huduma</div>
+            <div class="h-2 bg-blue-100 rounded-full overflow-hidden">
+              <div class="h-2 bg-blue-400 rounded-full w-0" data-width="50%"></div>
+            </div>
+          </div>
+
+          <!-- Statistic 2 -->
+          <div>
+            <div class="text-3xl font-bold text-yellow-400 mb-2">15,000+</div>
+            <div class="text-gray-600 text-sm mb-3">Wateja Waliohudumiwa</div>
+            <div class="h-2 bg-yellow-100 rounded-full overflow-hidden">
+              <div class="h-2 bg-yellow-400 rounded-full w-0" data-width="92%"></div>
+            </div>
+          </div>
+
+          <!-- Statistic 3 -->
+          <div>
+            <div class="text-3xl font-bold text-orange-400 mb-2">50+</div>
+            <div class="text-gray-600 text-sm mb-3">Wataalamu wa Afya</div>
+            <div class="h-2 bg-orange-100 rounded-full overflow-hidden">
+              <div class="h-2 bg-orange-400 rounded-full w-0" data-width="83%"></div>
+            </div>
+          </div>
+
+          <!-- Statistic 4 -->
+          <div>
+            <div class="text-3xl font-bold text-purple-400 mb-2">98%</div>
+            <div class="text-gray-600 text-sm mb-3">Wateja Walioridhika</div>
+            <div class="h-2 bg-purple-100 rounded-full overflow-hidden">
+              <div class="h-2 bg-purple-400 rounded-full w-0" data-width="100%"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <script>
+        // Animate bars on page load
+        document.addEventListener("DOMContentLoaded", () => {
+          const bars = document.querySelectorAll("[data-width]");
+          bars.forEach(bar => {
+            const width = bar.getAttribute("data-width");
+            setTimeout(() => {
+              bar.style.transition = "width 1.2s ease-in-out";
+              bar.style.width = width;
+            }, 200);
+          });
+        });
+      </script>
+
+
+    </div>
+
+    <div class="text-center">
+      <a href="contact.html"
+        class="inline-flex items-center bg-gradient-to-r from-[var(--primary-green)] to-[#9fe3b4] text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 mb-4">
+        <i class="fas fa-calendar-check mr-3 text-lg"></i>
+        Andika Miadi Sasa
+      </a>
+      <p class="text-gray-600 text-sm">Tupo tayari kukuhudumia kwa upendo na utaalamu</p>
+    </div>
+    </div>
+  </section>
+
+  <script>
+    const slider = document.getElementById('benefits-slider');
+    const slides = slider.children;
+    let index = 0;
+    const total = slides.length;
+
+    function slideBenefits() {
+      index = (index + 1) % total;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    setInterval(slideBenefits, 2000);
+  </script>
+
+  </section>
+
+
+
+
+
+  <!-- Gallery Section -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-[var(--dark-green)] mb-4">Mazingira Yetu ya Kliniki</h2>
+      <p class="text-xl text-center text-gray-600 mb-12">Tuna mazingira salama na ya kupendeza kwa ajili ya wagonjwa
+        wetu.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <img
+            src="doctor1.jpg"
+            alt="Chumba cha Kulalia" class="w-full h-64 object-cover rounded-xl shadow-md">
+          <p class="text-center mt-2 font-medium text-gray-700">Chumba cha Kulalia</p>
+        </div>
+
+        <div>
+          <img
+            src="doctor1.jpg"
+            alt="Daktari na Mtoto" class="w-full h-64 object-cover rounded-xl shadow-md">
+          <p class="text-center mt-2 font-medium text-gray-700">Daktari na Mtoto</p>
+        </div>
+
+        <div>
+          <img
+            src="reception.png"
+            alt="Eneo la Kungojea" class="w-full h-64 object-cover rounded-xl shadow-md">
+          <p class="text-center mt-2 font-medium text-gray-700">Eneo la Mapokezi</p>
+        </div>
+
+        <div>
+          <img
+            src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+            alt="Chanjo" class="w-full h-64 object-cover rounded-xl shadow-md">
+          <p class="text-center mt-2 font-medium text-gray-700">Kituo cha Chanjo</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-[var(--light-green)] py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-[var(--dark-green)] mb-4">Wateja Wetu Wanasema Nini</h2>
+      <p class="text-xl text-center text-gray-600 mb-12">Tunajivunia kusikia maoni ya wateja wetu kuhusu huduma
+        tulizotoa.</p>
+
+      <!-- Testimonials Carousel -->
+      <div class="relative overflow-hidden">
+        <div id="testimonial-slider" class="flex transition-transform duration-700 ease-in-out">
+          <!-- Testimonial 1 -->
+          <div class="flex-shrink-0 w-full">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <img src="Woman1.jpg" alt="Amina Juma" class="w-12 h-12 rounded-full mr-4 object-cover shadow">
+                <div>
+                  <h4 class="font-semibold">Amina Juma</h4>
+                  <p class="text-sm text-gray-500">Mama wa mtoto wa miezi 6</p>
+                </div>
+              </div>
+              <p class="text-gray-700">"Huduma bora sana! Nilitunzwa vizuri wakati wa ujauzito wangu na sasa ninaendelea
+                kumleta mtoto wangu kwa chanjo. Waangalizi hapa ni wapole na wenye ujuzi. Ninasikitika kwa kile
+                nilichokisaidia na nina hakika nitarudi tena."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="flex-shrink-0 w-full">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <img src="Woman2.jpg" alt="Neema Kondo" class="w-12 h-12 rounded-full mr-4 object-cover shadow">
+                <div>
+                  <h4 class="font-semibold">Neema Kondo</h4>
+                  <p class="text-sm text-gray-500">Mama wa watoto wawili</p>
+                </div>
+              </div>
+              <p class="text-gray-700">"Watoto wangu wanapenda kuja kwa chanjo hapa, wauguzi ni wapole na wanaweza
+                kuwashawishi watoto wadogo. Pia nimepata msaada mzuri wa kunyonyesha. Nimekuwa nikihudhuria kliniki hii
+                kwa miaka mitatu sasa na huduma zimekuwa bora kila wakati."</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="flex-shrink-0 w-full">
+            <div class="bg-white p-6 rounded-lg shadow-sm">
+              <div class="flex items-center mb-4">
+                <img src="Father1.jpg" alt="John Michael" class="w-12 h-12 rounded-full mr-4 object-cover shadow">
+                <div>
+                  <h4 class="font-semibold">John Michael</h4>
+                  <p class="text-sm text-gray-500">Baba wa mtoto wa mwaka 1</p>
+                </div>
+              </div>
+              <p class="text-gray-700">"Tovuti rahisi kutumia, huduma nzuri sana. Nilipata ushauri mzuri kuhusu lishe
+                bora kwa mama na mtoto. Mipango ya malipo pia ni rahisi. Ninaipendekeza kliniki hii kwa wote wanaotafuta
+                huduma bora za afya kwa mama na watoto."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Auto Slide Testimonials
+    const testimonialSlider = document.getElementById('testimonial-slider');
+    const testimonialSlides = testimonialSlider.children;
+    let testimonialIndex = 0;
+    const totalTestimonialSlides = testimonialSlides.length;
+
+    setInterval(() => {
+      testimonialIndex = (testimonialIndex + 1) % totalTestimonialSlides;
+      testimonialSlider.style.transform = `translateX(-${testimonialIndex * 100}%)`;
+    }, 5000); // every 3 seconds
+  </script>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-[var(--dark-green)] mb-4">Tayari Kumtunza Mama na Mtoto Wako?</h2>
+      <p class="text-xl text-gray-700 mb-8">Wasiliana nasi leo kwa ajili ya miadi au maswali yoyote kuhusu huduma zetu.
+      </p>
+      <div class="flex flex-col md:flex-row justify-center gap-4">
+        <a href="contact.html"
+          class="bg-[var(--primary-green)] text-white px-8 py-3 rounded-lg font-medium hover:bg-[var(--dark-green)] transition duration-300">
+          <i class="fas fa-phone-alt mr-2"></i>Tupigie Simu Sasa
+        </a>
+        <a href="contact.html"
+          class="bg-white text-[var(--primary-green)] border border-[var(--primary-green)] px-8 py-3 rounded-lg font-medium hover:bg-[var(--primary-green)] hover:text-white transition duration-300">
+          <i class="fas fa-envelope mr-2"></i>Tutumie Barua Pepe
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[var(--dark-green)] text-white py-12 mt-auto">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <div class="flex items-center space-x-2 mb-4">
+            <i class="fas fa-baby text-2xl"></i>
+            <span class="text-2xl font-bold">MtotoClinic</span>
+          </div>
+          <p class="text-gray-300 mb-4">Tunatoa huduma bora za afya kwa mama na mtoto tangu 2010.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Viungo vya Haraka</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300">Nyumbani</a></li>
+            <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300">Kuhusu Sisi</a></li>
+            <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300">Huduma Zetu</a>
+            </li>
+            <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300">Wasiliana Nasi</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Huduma Zetu</h3>
+          <ul class="space-y-2">
+            <li class="text-gray-300">Huduma kwa Mama Mjamzito</li>
+            <li class="text-gray-300">Huduma kwa Watoto</li>
+            <li class="text-gray-300">Ushauri wa Kunyonyesha</li>
+            <li class="text-gray-300">Chanjo za Watoto</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Wasiliana Nasi</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt mt-1 mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Sokoine Drive, Dar es Salaam</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-phone mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">+255 123 456 789</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-envelope mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">info@mtotoclinic.co.tz</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-clock mr-3 text-[var(--primary-green)]"></i>
+              <span class="text-gray-300">Jumatatu - Ijumaa: 8:00 - 18:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+        <p class="text-gray-400">&copy; <span id="year"></span> MtotoClinic. Haki zote zimehifadhiwa.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+  </script>
+</body>
+
+</html>
